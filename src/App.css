@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card {
+  background: #1e293b;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+button:disabled {
+  background: #64748b;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  margin-top: 1rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem; /* espacio entre botones */
+  flex-wrap: wrap; /* evita que se monten */
+}
+
+.active {
+  background: #22c55e;
+}
+
+mark {
+  background: #facc15;
+  color: black;
+  padding: 0 2px;
+  border-radius: 4px;
+}
+
+select {
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+}
+
+.feedback {
+  background: #22c55e;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Boton eliminar */
+
+.item-row {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 👈 centra todo el bloque */
+  gap: 0.5rem;
+}
+
+.item-text {
+  text-align: center;
+  flex: none;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* animacion al agregar item */
+
+.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* animacion al eliminar item */
+
+.fade-out {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+.empty {
+  text-align: center;
+  opacity: 0.7;
+  padding: 1rem;
+}
