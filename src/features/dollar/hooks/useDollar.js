@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getDollar } from '../services/api'
+import { getDollar } from "../../../services/api";
 
 export function useDollar() {
   const [dollar, setDollar] = useState(null)

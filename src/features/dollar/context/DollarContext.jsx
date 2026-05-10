@@ -14,5 +14,11 @@ export function DollarProvider({ children }) {
 }
 
 export function useDollarContext() {
-  return useContext(DollarContext);
+  const context = useContext(DollarContext);
+
+  if (!context) {
+    throw new Error("useDollarContext debe usarse dentro de DollarProvider");
+  }
+
+  return context;
 }

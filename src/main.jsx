@@ -2,9 +2,9 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { ItemsProvider } from "./context/ItemsProvider";
-import { FilterProvider } from "./context/FilterContext";
-import { DollarProvider } from "./context/DollarContext";
+import { ItemsProvider } from "./features/items/context/ItemsProvider";
+import { FilterProvider } from "./features/filters/context/FilterContext";
+import { DollarProvider } from "./features/dollar/context/DollarContext";
 
 createRoot(document.getElementById("root")).render(
   <ItemsProvider>

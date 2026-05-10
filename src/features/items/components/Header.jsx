@@ -1,4 +1,4 @@
-import { useDollarContext } from "./context/DollarContext";
+import { useDollarContext } from "@/features/dollar";
 
 function Header() {
   const { dollar, loading, error } = useDollarContext();
